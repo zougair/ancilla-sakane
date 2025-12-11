@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Happy Birthday ancilla</title>
+    <title>Happy Birthday</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -9,7 +9,7 @@
 </head>
 
 <div>
-       <div class="container">
+        <div class="container">
         <div class="row">
             <div class="loader">
                 <button id="play">Start</button>
@@ -28,38 +28,36 @@
 
          
 
-                <div class="col-12 col-xl-6 mx-auto  text-center">
-                    <img class="banner" src="img/banner.png" alt="">
-                </div>  
+<div class="col-12 col-xl-6 mx-auto text-center">
+    <img class="banner" src="img/banner.png" alt="">
 
-                <div class="col-12  text-center">
-                    <img class="sanrio" src="img/sanrio.gif" alt="">
-                    <div id="name" class="area">ancilla ❤️</div>
-                </div>
-
-                <div class="col-12 text-center">
-                    <div class="type-wrap">
-                        <div id="typed-strings" class="typing">
-                            <h2>Happy Birthday my <i id="nae">ancilla ❤️</i></h2>
-                            <h2>Have a wonderful day baby</h2>
-                            <h2>Filled with joy and happiness mama.</h2>
-                            <h2>The 12/12 is sepcial number like u my special i love u so much ❤️</h2>
-                        </div>
-                        <span id="typed" style="white-space:pre;"></span>
-                    </div>
-                </div>
-
-                <div class="col-12 col-xl-3 cake">
-                <img src="img/cake.gif" alt="">
-                 <img class="kitty" src="img/kitty.gif" alt="">
-                <img class="hello" src="img/hello-kitty.gif" alt="">
-                    
-                </div>
-            </div>
-        </div>
-        <img src="img/Balloon-Border.png" width="100%" class="balloon-border">
+    <!-- Moved sanrio-line directly under banner -->
+    <div class="sanrio-line">
+        <img class="sanrio" src="img/sanrio.gif" alt="">
+        <div id="name" class="area">ancilla ❤️</div>
     </div>
 </div>
+
+<div class="col-12 text-center">
+    <div class="type-wrap">
+        <div id="typed-strings" class="typing">
+            <h2>Happy Birthday my <i id="nae">ancilla ❤️</i></h2>
+            <h2>Have a wonderful day baby</h2>
+            <h2>Filled with joy and happiness mama.</h2>
+            <h2>The 12/12 is special number like u my special i love u so much ❤️</h2>
+        </div>
+        <span id="typed" style="white-space:pre;"></span>
+    </div>
+</div>
+
+<div class="col-12 col-xl-3 cake-wrapper">
+    <img class="kitty" src="img/kitty.gif" alt="">
+    <img class="cake" src="img/cake.gif" alt="">
+    <img class="hello" src="img/hello-kitty.gif" alt="">
+</div>
+
+<img src="img/Balloon-Border.png" width="100%" class="balloon-border">
+
 </body>
 <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 <script src="js/jquery.js"></script>
@@ -67,5 +65,3 @@
 <script src="js/script.js"></script>
 
 </html>
-
-
