@@ -5,8 +5,7 @@
     position: fixed;
     left: 50%;
     top: 45%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: center no-repeat #f8529d;
     z-index: 9999999999999999999999;
     font-size: 50px;
@@ -15,7 +14,8 @@
     border: none;
     border-radius: .3em;
     text-transform: uppercase;
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.785), 0 3px 6px rgba(110, 80, 20, .4),
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.785),
+        0 3px 6px rgba(110, 80, 20, .4),
         inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
         inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
     background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
@@ -31,7 +31,8 @@
 .golden-btn:focus,
 .golden-btn:hover {
     background-size: 150% 150%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23),
         inset 0 -2px 5px 1px #b17d10,
         inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
     border: 1px solid rgba(165, 93, 7, .6);
@@ -39,7 +40,8 @@
 }
 
 .golden-btn:active {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16),
+        0 3px 6px rgba(110, 80, 20, .4),
         inset 0 -2px 5px 1px #b17d10,
         inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
 }
@@ -60,10 +62,13 @@
 
 body {
     background-color: #FCC9E0;
+    margin: 0;
+    padding: 0;
 }
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .balloon-border {
@@ -97,63 +102,127 @@ img {
 }
 
 @keyframes spin {
-    0% {
-        transform: rotateZ(0);
-    }
-
-    25% {
-        transform: rotateZ(10deg);
-    }
-
-    50% {
-        transform: rotateZ(0deg);
-    }
-
-    75% {
-        transform: rotateZ(-10deg);
-    }
+    0% { transform: rotateZ(0); }
+    25% { transform: rotateZ(10deg); }
+    50% { transform: rotateZ(0deg); }
+    75% { transform: rotateZ(-10deg); }
 }
 
 .type-wrap {
     font-size: 25px;
     color: #C4515C;
-
 }
 
+/* ELEMENT POSITIONS */
 .cake {
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    left: 50%;
     position: absolute;
- 
-     width: 40% ;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
 }
 
 .hello {
- 
-   
-    left: 360px;
     position: absolute;
+    left: 360px;
     padding-top: 100px;
     padding: 10px;
-   
 }
+
 .kitty {
- 
+    position: absolute;
     right: 360px;
-    position: absolute;
     padding-top: 100px;
     padding: 10px;
-  
 }
+
 .sanrio {
- width: 20% ;
-    left: 360px;
+    width: 20%;
     position: absolute;
+    left: 360px;
     padding-top: 100px;
     padding: 10px;
 }
+
 .banner {
- width: 40% ;
- 
+    width: 40%;
+}
+
+/* ================================================================= */
+/* ========================= RESPONSIVE FIX ========================= */
+/* ================================================================= */
+
+@media (max-width: 900px) {
+    .loader button {
+        width: 80%;
+        height: 75px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .loader button {
+        width: 90%;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .area {
+        font-size: 45px;
+        letter-spacing: -3px;
+    }
+
+    .type-wrap {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Fix all absolute elements */
+    .hello,
+    .kitty,
+    .sanrio {
+        position: relative;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 60%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .cake {
+        width: 70%;
+        position: relative;
+        margin: 20px auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .banner {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .area {
+        font-size: 32px;
+        letter-spacing: -2px;
+    }
+
+    .loader button {
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .cake {
+        width: 85%;
+    }
+
+    .hello,
+    .kitty,
+    .sanrio {
+        width: 75%;
+    }
 }
